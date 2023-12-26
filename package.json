@@ -1,0 +1,95 @@
+{
+  "name": "ring-client-api",
+  "version": "12.0.1",
+  "description": "Unofficial API for Ring doorbells, cameras, security alarm system and smart lighting",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./ffmpeg": "./lib/ffmpeg.js",
+    "./util": "./lib/util.js",
+    "./rest-client": "./lib/rest-client.js"
+  },
+  "scripts": {
+    "build": "rm -rf lib && tsc --declaration && chmod +x ./lib/ring-*-cli.js",
+    "dev": "tsc --declaration --watch --preserveWatchOutput",
+    "lint": "eslint . --ext .ts",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "dependencies": {
+    "@eneris/push-receiver": "^3.1.5",
+    "@homebridge/camera-utils": "^2.2.0",
+    "@peculiar/asn1-schema": "^2.3.6",
+    "@peculiar/webcrypto": "^1.4.3",
+    "@types/socket.io-client": "1.4.36",
+    "colors": "1.4.0",
+    "debug": "^4.3.4",
+    "got": "^11.8.5",
+    "json-bigint": "^1.0.0",
+    "msw": "^1.3.1",
+    "pvtsutils": "^1.3.5",
+    "rxjs": "^7.8.1",
+    "socket.io-client": "^2.5.0",
+    "systeminformation": "^5.21.5",
+    "uuid": "^9.0.1",
+    "webcrypto-core": "^1.7.7",
+    "werift": "0.18.6",
+    "ws": "^8.14.1"
+  },
+  "devDependencies": {
+    "@types/debug": "4.1.8",
+    "@types/jest": "29.5.5",
+    "@types/json-bigint": "^1.0.2",
+    "@types/node": "20.6.2",
+    "@types/uuid": "9.0.4",
+    "@types/ws": "^8.5.5",
+    "eslint-config-shared": "*",
+    "jest": "29.7.0",
+    "ts-jest": "29.1.1",
+    "tsconfig": "*",
+    "typescript": "5.2.2"
+  },
+  "engines": {
+    "node": "^18 || ^20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dgreif/ring.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dgreif/ring/issues"
+  },
+  "homepage": "https://github.com/dgreif/ring/tree/main/packages/ring-client-api#ring-client-api",
+  "author": "dgreif",
+  "license": "MIT",
+  "funding": [
+    {
+      "type": "paypal",
+      "url": "https://www.paypal.me/dustingreif"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/dgreif"
+    }
+  ],
+  "bin": {
+    "ring-auth-cli": "lib/ring-auth-cli.js",
+    "ring-device-data-cli": "lib/ring-device-data-cli.js"
+  },
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "ring",
+    "doorbell",
+    "doorbot",
+    "camera",
+    "alarm",
+    "smart",
+    "light",
+    "beam",
+    "security",
+    "client",
+    "api"
+  ]
+}
