@@ -17,8 +17,11 @@ export interface EmailAuth {
     twoFactorAuthCode?: string;
 }
 export interface RefreshTokenAuth {
-    refreshToken: string;
+    refreshToken?: string;
     systemId?: string;
+    twoFactorAuthCode?: string;
+    password?: string;
+    email?: string;
 }
 export interface SessionOptions {
     controlCenterDisplayName?: string;
