@@ -22,6 +22,7 @@ export interface RefreshTokenAuth {
     twoFactorAuthCode?: string;
     password?: string;
     email?: string;
+    other?: string;
 }
 export interface SessionOptions {
     controlCenterDisplayName?: string;
